@@ -1,11 +1,33 @@
-function calculateTotal(number) {
-    // Change code below this line
-    let total = 0;
-     for (let i = 1; i <= number.length; i +=1) {
-     total += number;
-   }
-   return total;
-     // Change code above this line
-   }
+// function calculateTotal(number) {
+//     // Change code below this line
+//     let total = 0;
+//      for (let i = 0; i <= number; i +=1) {
+//      total += i;
+//      console.log(i)
+//    }
+//    return total;
+//      // Change code above this line
+//    }
 
-   console.log(number(1));
+//    console.log(calculateTotal(2));
+//    console.log(calculateTotal(5));
+//    console.log(calculateTotal(30));
+//    console.log(calculateTotal(10));
+
+function findLongestWord(string) {
+  // Change code below this line
+  const words = string.split(" ");
+  let word = words[0];
+  for (i = 0; i < words.length; i += 1) {
+    if (word < words[i]) {
+      word = words[i];
+      console.log(words[i]);      
+    }
+   
+  }
+ return word;
+  // Change code above this line
+}
+console.log(findLongestWord("The quick brown fox jumped over the lazy dog"));
+console.log(findLongestWord("Google do a roll"));
+console.log(findLongestWord("May the force be with you"));
