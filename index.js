@@ -58,18 +58,28 @@
 //   return total;
 // }
 
-function calculateTotalPrice(order) {
-  let total = 0;
+// function calculateTotalPrice(order) {
+//   let total = 0;
+//   // Change code below this line
+
+//   for (const i of order) {
+//     total += i;
+//   }
+
+//   // Change code above this line
+//   return total;
+// }
+
+// console.log(calculateTotalPrice([12, 85, 37, 4]));
+// console.log(calculateTotalPrice([412, 371, 94, 63, 176]));
+// console.log(calculateTotalPrice([0]));
+
+
+function includes(array, value) {
   // Change code below this line
-
-  for (const i of order) {
-    total += i;
-  }
-
+for (arr of array) {
+   arr === value }
   // Change code above this line
-  return total;
 }
-
-console.log(calculateTotalPrice([12, 85, 37, 4]));
-console.log(calculateTotalPrice([412, 371, 94, 63, 176]));
-console.log(calculateTotalPrice([0]));
+console.log(includes([1, 2, 3, 4, 5], 3))
+console.log(includes(["Earth", "Mars", "Venus", "Jupiter", "Saturn"], "Uranus"))
