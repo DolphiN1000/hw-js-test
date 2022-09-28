@@ -75,11 +75,16 @@
 // console.log(calculateTotalPrice([0]));
 
 
-function includes(array, value) {
-  // Change code below this line
-for (arr of array) {
-   arr === value }
-  // Change code above this line
-}
-console.log(includes([1, 2, 3, 4, 5], 3))
-console.log(includes(["Earth", "Mars", "Venus", "Jupiter", "Saturn"], "Uranus"))
+// function includes(array, value) {
+//   // Change code below this line
+// for (arr of array) {
+//    if (arr === value) {
+//     return true;
+//    } }
+//    return false
+//   // Change code above this line
+// }
+// console.log(includes([1, 2, 3, 4, 5], 3))
+// console.log(includes(["Earth", "Mars", "Venus", "Jupiter", "Saturn"], "Uranus"))
+
+
