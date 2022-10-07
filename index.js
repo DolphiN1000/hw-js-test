@@ -213,23 +213,38 @@
 // apartment.location.country = "Jamaica";
 // apartment.location.city = "Kingston";
 
-const products = [
-  { name: "Radar", price: 1300, quantity: 4 },
-  { name: "Scanner", price: 2700, quantity: 3 },
-  { name: "Droid", price: 400, quantity: 7 },
-  { name: "Grip", price: 1200, quantity: 9 },
-];
+// const products = [
+//   { name: "Radar", price: 1300, quantity: 4 },
+//   { name: "Scanner", price: 2700, quantity: 3 },
+//   { name: "Droid", price: 400, quantity: 7 },
+//   { name: "Grip", price: 1200, quantity: 9 },
+// ];
 
-function getProductPrice(productName) {
-  // Change code below this line
-for (productName of products) {
-  if (productName === products.name) {
-    console.Log(products.price)
-    return products.price;
+// function getProductPrice(productName) {
+//   // Change code below this line
+// for (productName of products) {
+//   if (productName === products.name) {
+//     console.Log(products.price)
+//     return products.price;
     
-  }
-}
+//   }
+// }
 
 
-  // Change code above this line
-}
+//   // Change code above this line
+// }
+
+
+
+const highTemperatures = {
+  yesterday: 28,
+  today: 26,
+  tomorrow: 33,
+};
+// Change code below this line
+const {highYesterday, highToday, highTomorrow, icon: highIcon = "https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg"} = highTemperatures;
+console.log(highTemperatures)
+
+// Change code above this line
+const meanTemperature = (highYesterday + highToday + highTomorrow) / 3;
+console.log((highYesterday + highToday + highTomorrow) / 3)
