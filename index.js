@@ -193,22 +193,43 @@
 // // Change code above this line
 // console.log(numberOfTags)
 
-const apartment = {
-  imgUrl: "https://via.placeholder.com/640x480",
-  descr: "Spacious apartment in the city center",
-  rating: 4.7,
-  price: 5000,
-  tags: ["premium", "promoted", "top", "trusted"],
-  owner: {
-    name: "Henry Sibola",
-    phone: "982-126-1588",
-    email: "henry.carter@aptmail.com",
-  },
-};
+// const apartment = {
+//   imgUrl: "https://via.placeholder.com/640x480",
+//   descr: "Spacious apartment in the city center",
+//   rating: 4.7,
+//   price: 5000,
+//   tags: ["premium", "promoted", "top", "trusted"],
+//   owner: {
+//     name: "Henry Sibola",
+//     phone: "982-126-1588",
+//     email: "henry.carter@aptmail.com",
+//   },
+// };
 
-// Change code below this line
-apartment.area = 60;
-apartment.rooms = 3;
-apartment.location = '';
-apartment.location.country = "Jamaica";
-apartment.location.city = "Kingston";
+// // Change code below this line
+// apartment.area = 60;
+// apartment.rooms = 3;
+// apartment.location = '';
+// apartment.location.country = "Jamaica";
+// apartment.location.city = "Kingston";
+
+const products = [
+  { name: "Radar", price: 1300, quantity: 4 },
+  { name: "Scanner", price: 2700, quantity: 3 },
+  { name: "Droid", price: 400, quantity: 7 },
+  { name: "Grip", price: 1200, quantity: 9 },
+];
+
+function getProductPrice(productName) {
+  // Change code below this line
+for (productName of products) {
+  if (productName === products.name) {
+    console.Log(products.price)
+    return products.price;
+    
+  }
+}
+
+
+  // Change code above this line
+}
