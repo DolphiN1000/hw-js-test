@@ -236,15 +236,34 @@
 
 
 
-const highTemperatures = {
-  yesterday: 28,
-  today: 26,
-  tomorrow: 33,
-};
-// Change code below this line
-const {highYesterday, highToday, highTomorrow, icon: highIcon = "https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg"} = highTemperatures;
-console.log(highTemperatures)
+// const highTemperatures = {
+//   yesterday: 28,
+//   today: 26,
+//   tomorrow: 33,
+// };
+// // Change code below this line
+// const {highYesterday, highToday, highTomorrow, icon: highIcon = "https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg"} = highTemperatures;
+// console.log(highTemperatures)
 
-// Change code above this line
-const meanTemperature = (highYesterday + highToday + highTomorrow) / 3;
-console.log((highYesterday + highToday + highTomorrow) / 3)
+// // Change code above this line
+// const meanTemperature = (highYesterday + highToday + highTomorrow) / 3;
+// console.log((highYesterday + highToday + highTomorrow) / 3)
+
+// const atTheOldToad = {
+//   // Change code below this line
+// potions : []
+//   // Change code above this line
+// };
+// console.log(atTheOldToad.potions)
+
+const atTheOldToad = {
+  potions: ["Speed potion", "Dragon breath", "Stone skin"],
+  removePotion(potionName) {
+    // Change code below this line
+const indexName = this.potions.indexOf(potionName);
+    this.potions.splice(indexName, 1);
+console.log(this.potions)
+return this.potions
+    // Change code above this line
+  },
+};
