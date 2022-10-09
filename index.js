@@ -256,14 +256,59 @@
 // };
 // console.log(atTheOldToad.potions)
 
+// const atTheOldToad = {
+//   potions: ["Speed potion", "Dragon breath", "Stone skin"],
+//   removePotion(potionName) {
+//     // Change code below this line
+// const indexName = this.potions.indexOf(potionName);
+//     this.potions.splice(indexName, 1);
+// console.log(this.potions)
+// return this.potions
+//     // Change code above this line
+//   },
+// };
+
+
 const atTheOldToad = {
-  potions: ["Speed potion", "Dragon breath", "Stone skin"],
-  removePotion(potionName) {
-    // Change code below this line
-const indexName = this.potions.indexOf(potionName);
-    this.potions.splice(indexName, 1);
-console.log(this.potions)
-return this.potions
-    // Change code above this line
+  potions: [
+    { name: "Speed potion", price: 460 },
+    { name: "Dragon breath", price: 780 },
+    { name: "Stone skin", price: 520 },
+  ],
+  // Change code below this line
+  getPotions() {
+    return this.potions;
   },
+  addPotion({name, price,}) {
+    if (this.potions.includes(name, price)) {
+      return `Error! Potion ${name, price} is already in your inventory!`;
+    }
+
+    this.potions.push(name, price);
+  },
+  removePotion(potionName) {
+    const potionIndex = this.potions.indexOf(potionName);
+
+    if (potionIndex === -1) {
+      return `Potion ${potionName} is not in inventory!`;
+    }
+
+    this.potions.splice(potionIndex, 1);
+  },
+  updatePotionName(oldName, newName) {
+    const potionIndex = this.potions.indexOf(oldName);
+
+    if (potionIndex === -1) {
+      return `Potion ${oldName} is not in inventory!`;
+    }
+
+    this.potions.splice(potionIndex, 1, newName);
+  },
+  // Change code above this line
 };
+console.log(atTheOldToad.getPotions())
+console.log(atTheOldToad.addPotion("Speed potion"))
+atTheOldToad.addPotion({ name: "Dragon breath", price: 780 })
+atTheOldToad.addPotion({ name: "Invisibility", price: 620, year: 2000 })
+atTheOldToad.addPotion({ name: "Stone skin", price: 240 })
+console.log(atTheOldToad.getPotions())
