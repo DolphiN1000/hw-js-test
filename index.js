@@ -314,53 +314,87 @@
 // console.log(atTheOldToad.getPotions())
 
 
-const atTheOldToad = {
-  potions: [
-    { name: "Speed potion", price: 460 },
-    { name: "Dragon breath", price: 780 },
-    { name: "Stone skin", price: 520 },
-  ],
-  // Change code below this line
-  getPotions() {
-    return this.potions;
-  },
-  addPotion(newPotion) {
-    for (const potion of this.potions) {
-    if (newPotion.name === potion.name) { 
-      return `Error! Potion ${newPotion.name} is already in your inventory!`;
-    }
-    }
-       this.potions.push(newPotion);
-    }
-    ,
-  removePotion(potionName) {
-      const potionIndex = this.potions.indexOf(potionName);
-      console.log(potionIndex );
-    for (const potion of this.potions) {
-        if (potionIndex === -1) {
-      return `Potion ${potionName.name} is not in inventory!`;
-    }
+// const atTheOldToad = {
+//   potions: [
+//     { name: "Speed potion", price: 460 },
+//     { name: "Dragon breath", price: 780 },
+//     { name: "Stone skin", price: 520 },
+//   ],
+//   // Change code below this line
+//   getPotions() {
+//     return this.potions;
+//   },
+//   addPotion(newPotion) {
+//     for (const potion of this.potions) {
+//     if (newPotion.name === potion.name) { 
+//       return `Error! Potion ${newPotion.name} is already in your inventory!`;
+//     }
+//     }
+//        this.potions.push(newPotion);
+//     }
+//     ,
+//   removePotion(potionName) {
+//       const potionIndex = this.potions.indexOf(potionName);
+//       console.log(potionIndex );
+//     for (const potion of this.potions) {
+//         if (potionIndex === -1) {
+//       return `Potion ${potionName.name} is not in inventory!`;
+//     }
   
-this.potions.splice(potionIndex, 1);
+// this.potions.splice(potionIndex, 1);
   
-    }
+//     }
 
     
-  },
-  updatePotionName(oldName, newName) {
-    const potionIndex = this.potions.indexOf(oldName);
-    for (const potion of this.potions) {
-       if (potionIndex === -1) {
-      return `Potion ${oldName.name} is not in inventory!`;
-    }
-    }
+//   },
+//   updatePotionName(oldName, newName) {
+//     const potionIndex = this.potions.indexOf(oldName);
+//     for (const potion of this.potions) {
+//        if (potionIndex === -1) {
+//       return `Potion ${oldName.name} is not in inventory!`;
+//     }
+//     }
 
    
 
-    this.potions.splice(potionIndex, 1, newName);
-  },
-  // Change code above this line
-};
+//     this.potions.splice(potionIndex, 1, newName);
+//   },
+//   // Change code above this line
+// };
 
 
-atTheOldToad.getPotions()
+// atTheOldToad.getPotions()
+
+const pizzaPalace = {
+  pizzas: ["Ultracheese", "Smoked", "Four meats"],
+  order(pizzaName, onSuccess, onError) {
+    for (const pizza of pizzaPalace.pizzas) {
+      console.log(pizza);
+    if (!pizzaName === pizza) {
+      onOrderError(pizzaName); {console.log(`There is no pizza with a name {$pizzaName} in the assortment.`);
+      }
+    }
+      else {
+        makePizza(pizzaName);
+      }
+    }}
+
+  }
+;
+// Change code above this line
+
+// Callback for onSuccess
+function makePizza(pizzaName) {
+  return `Your order is accepted. Cooking pizza ${pizzaName}.`;
+}
+
+// Callback for onError
+function onOrderError(error) {
+  return `Error! ${error}`;
+}
+
+// Method calls with callbacks
+pizzaPalace.order("Smoked", makePizza, onOrderError);
+pizzaPalace.order("Four meats", makePizza, onOrderError);
+pizzaPalace.order("Big Mike", makePizza, onOrderError);
+console.log(pizzaPalace.order("Vienna", makePizza, onOrderError));
