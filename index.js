@@ -365,36 +365,60 @@
 
 // atTheOldToad.getPotions()
 
-const pizzaPalace = {
-  pizzas: ["Ultracheese", "Smoked", "Four meats"],
-  order(pizzaName, onSuccess, onError) {
-    for (const pizza of pizzaPalace.pizzas) {
-      console.log(pizza);
-    if (!pizzaName === pizza) {
-      onOrderError(pizzaName); {console.log(`There is no pizza with a name {$pizzaName} in the assortment.`);
-      }
-    }
-      else {
-        makePizza(pizzaName);
-      }
-    }}
+// const pizzaPalace = {
+//   pizzas: ["Ultracheese", "Smoked", "Four meats"],
+//   order(pizzaName, onSuccess, onError) {
+//     for (const pizza of pizzaPalace.pizzas) {
+//       console.log(pizza);
+//     if (!pizzaName === pizza) {
+//       onOrderError(pizzaName); {console.log(`There is no pizza with a name {$pizzaName} in the assortment.`);
+//       }
+//     }
+//       else {
+//         makePizza(pizzaName);
+//       }
+//     }}
 
+//   }
+// ;
+// // Change code above this line
+
+// // Callback for onSuccess
+// function makePizza(pizzaName) {
+//   return `Your order is accepted. Cooking pizza ${pizzaName}.`;
+// }
+
+// // Callback for onError
+// function onOrderError(error) {
+//   return `Error! ${error}`;
+// }
+
+// // Method calls with callbacks
+// pizzaPalace.order("Smoked", makePizza, onOrderError);
+// pizzaPalace.order("Four meats", makePizza, onOrderError);
+// pizzaPalace.order("Big Mike", makePizza, onOrderError);
+// console.log(pizzaPalace.order("Vienna", makePizza, onOrderError));
+
+function getCommonElements(firstArray, secondArray) {
+  const commonElements = [];
+  // Change code below this line
+  
+  if (firstArray.length <= secondArray.length) {
+    let firstArrays = secondArray;
+    let  secondArray = firstArray;
+  } else {
+    let firstArrays = firstArray;
+    let secondArrays = secondArray;
   }
-;
-// Change code above this line
+firstArrays.forEach(function(firstArr) {
+  secondArrays.forEach(function(secondArr) {
+    if (firstArr === secondArr) {
+      commonElements.push(firstArr)
+    }
+  })
+})
+  
 
-// Callback for onSuccess
-function makePizza(pizzaName) {
-  return `Your order is accepted. Cooking pizza ${pizzaName}.`;
+  return commonElements;
+  // Change code above this line
 }
-
-// Callback for onError
-function onOrderError(error) {
-  return `Error! ${error}`;
-}
-
-// Method calls with callbacks
-pizzaPalace.order("Smoked", makePizza, onOrderError);
-pizzaPalace.order("Four meats", makePizza, onOrderError);
-pizzaPalace.order("Big Mike", makePizza, onOrderError);
-console.log(pizzaPalace.order("Vienna", makePizza, onOrderError));
